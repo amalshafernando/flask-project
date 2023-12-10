@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Advertising App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+  <style>
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      font-family: Roboto;
+      color: rgb(80,80,80)
+    }
+    h1{
+       text-align: center;
+    }
+    #container {
+      
+    }
+  </style>
+<body>
+  <div id="container">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">AmFer AI solutions</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto"> <!-- Use ml-auto to push items to the right -->
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <!-- Add more navigation items as needed -->
+          </ul>
+      </div>
+  </nav>
+
+  <img src = "https://flask-project.amalshafernando.repl.co/static/banner.jpg" height=320 width = 1348 >
+<div class="container mt-3">
+  
+    <h1>Welcome to our Job Advertising App!</h1>
+
+  <h2> About Us</h2>
+  
+  <p>
+    Welcome to AmFer, your gateway to innovative solutions in the realm of artificial intelligence. As a dynamic AI-based solutions-building start-up, AmFer is dedicated to reshaping industries through cutting-edge technologies and fostering a new era of possibilities.
+
+    At AmFer, we recognize the transformative potential of artificial intelligence and are on a mission to harness its power for the benefit of businesses and individuals alike. Our team of passionate experts is committed to pushing the boundaries of what's possible, leveraging AI to create solutions that drive efficiency, enhance user experiences, and solve complex challenges.
+
+    As a start-up, we thrive on the spirit of innovation and the pursuit of excellence. Our goal is to provide tailored AI solutions that not only meet but exceed the unique needs of our clients. Whether you're navigating the evolving landscape of technology or seeking to integrate AI seamlessly into your operations, AmFer is your partner in progress.
+
+    Join us in shaping the future of AI solutions. Together, let's build a world where the limitless potential of artificial intelligence is harnessed to drive positive change and propel businesses to new heights. Thank you for choosing AmFer – where AI meets innovation.
+
+
+    
+  </p>
+
+    <h2>Job Listings</h2>
+    <ul class="list-group">
+        {% for job in jobs %}
+            <li class="list-group-item">
+                <strong>
+                  {{ job.title }}
+                  <button type="button" class="btn btn-primary float-right align-middle">Apply</button>
+                </strong> 
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
